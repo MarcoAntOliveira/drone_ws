@@ -1,0 +1,13 @@
+# Ponte para comandos de joystick (Manual)
+- ros_topic_name: "/joy"
+  gz_topic_name: "/joy"
+  ros_type_name: "sensor_msgs/msg/Joy"
+  gz_type_name: "gz.msgs.Joy"
+  direction: ROS_TO_GZ
+
+# Ponte para o estado do drone (Saber se está em Offboard ou não)
+- ros_topic_name: "/fmu/out/vehicle_status"
+  gz_topic_name: "/fmu/out/vehicle_status"
+  ros_type_name: "px4_msgs/msg/VehicleStatus"
+  gz_type_name: "gz.msgs.EntityState" # Depende da versão do PX4/GZ
+  direction: GZ_TO_ROS
